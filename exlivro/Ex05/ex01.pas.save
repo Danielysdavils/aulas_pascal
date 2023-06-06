@@ -1,0 +1,26 @@
+program ex01;
+
+var n,m : longint;
+
+function contrario(n, m : integer) : boolean;
+var nMod, nNum : longint;
+
+begin
+	nNum := 0;
+	while n <> 0 do 
+	begin
+		nMod:= n mod 10;
+		nNum:= (nNum * 10) + nMod;
+		n:= n div 10;
+	end;
+	if nNum = m then contrario:= true
+	else contrario:= false;
+end;
+
+begin
+	read(n,m);
+	if contrario(n,m) then
+		writeln(n, 'eh o contrario de ', m)
+	else
+		writeln(n, 'não eh o contrario de ', m);
+end.
