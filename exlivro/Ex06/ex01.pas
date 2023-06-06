@@ -3,29 +3,21 @@ program ex01;
 var n : longint;
 
 function ehBinario(n : longint) : boolean;
-var nMod : longint;
-    testeBin : boolean;
+var testeBin : boolean;
+    nMod : longint;
 
 begin
-	testeBin := true; 
-	while(n <> 0) or (testeBin = true) do
+	testeBin:= true;
+	while testeBin do
 	begin
-		nMod := n mod 10;
-		writeln(nMod);
-		if(nMod = 0) or (nMod = 1) then
-		begin
-			writeln('estou aqui');
-			n:= n div 10;
-			
-		end
+		nMod:= n mod 10;
+		if (nMod <> 1) or (nMod <> 0) then
+			testeBin := false
 		else
-		begin
-			writeln('estouuuu aquiii');
-			testeBin := false;
-		end;
+			n:= n div 10;
 	end;
 	ehBinario := testeBin;
-end;
+end;	
 
 begin
 	readln(n);
