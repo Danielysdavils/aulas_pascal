@@ -22,7 +22,7 @@ end;
 begin
 	readln(n);
 	if ehBinario(n) then
-		writeln('sim')
+		writeln('E sim')
 	else
 		writeln('nao');
 end.
